@@ -1,5 +1,5 @@
 const pageContent = document.querySelector('.page-content');
-const number = Array(9).fill(" ");
+let number = Array(9).fill(" ");
 let choiseLife = 3;
 let choisedCardNumbers = [];
 let count = 1;
@@ -12,11 +12,11 @@ const choise = (event) => {
 
     target.style.background = 'red';
 
-    let nanNum = Math.floor(Math.random()*3)+1;
+    const nanNum = Math.floor(Math.random()*3)+1;
     num.innerText = nanNum;
     choisedCardNumbers.push(nanNum);
 
-    let index = choisedCardNumbers.length-2;
+    const index = choisedCardNumbers.length-2;
 
     if(choisedCardNumbers.length > 1){
         for(let i= index; i < choisedCardNumbers.length-1; i++){
